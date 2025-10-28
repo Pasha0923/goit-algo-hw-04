@@ -7,7 +7,7 @@ init(autoreset=True)
 
 if len(sys.argv) < 2:
     print(" ❌ Вкажіть шлях до папки як аргумент командного рядка!")
-    print(" ✔ Наприклад: python main.py C:\Users\Pasha\Desktop\Проекти GitHub\goit-algo-hw-04\task3")
+    print(" ✔ Наприклад: python main.py C:/Users/Pasha/Desktop/Проекти GitHub/goit-algo-hw-04/task3/Temp")
     sys.exit(1)
 
 path = sys.argv[1]  # Отримуємо шлях до папки з аргументів командного рядка
