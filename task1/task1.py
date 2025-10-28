@@ -17,14 +17,14 @@ def total_salary(path):
             for line in file:
                 try:
                     salary_list = line.strip().split(',') # Перетворюємо рядок у список та розділяємо комою
-                    print(salary_list)
+                    # print(salary_list)
                  
-                    salary = int(salary_list[1]) # Отримуємо значення зарплати зі списку та перетворюємо на ціле число
+                    salary = float(salary_list[1]) # Отримуємо значення зарплати зі списку 
                     # print(salary) 
                     total_salary += salary
-                    # print(total_salary)
+                    print(total_salary)
                     salaries.append(salary) # Добавили в словник значення зарплат
-                    # print(salaries)
+                    print(salaries)
                 except (ValueError, IndexError):
                     print(f"❌ Введіть корректний формат: наприклад 'Alex Jackson,3000'")
     except FileNotFoundError:
@@ -33,9 +33,10 @@ def total_salary(path):
         print("❗ Відсутні дані для розрахунку середнього значення") 
         return 0, 0
     average_summary = total_salary / len(salaries) 
+    print(average_summary)
     return total_salary, average_summary
    
-total, average = total_salary("example.txt") # 
+total, average = total_salary("example.txt") 
 print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
 
 
